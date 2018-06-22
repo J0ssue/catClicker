@@ -6,15 +6,35 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-	<h1>Cat Clicker Project</h1>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
-	<div id="clicks-container">
-		<h2>You've Clicked on this cat <span id="clicks"></span> times</h2>	
+    
+	<h1 class="text-center">Cat Clicker Project</h1>
+
+	<div id="cat-container" class="container d-flex justify-content-between text-center">
+		<div id="cat1">
+			<h2>Cat One</h2>
+			<h2>You've Clicked on <span id="name"></span> <span id="clicks"></span> times</h2>	
+			<img id="img" class="d-block m-auto" src="src/catClicker.jpg" alt="cat picture">
+		</div>
+		<div id="cat2">
+			<h2>Cat Two</h2>
+			<h2>You've Clicked on <span id="name"></span> <span id="clicks2"></span> times</h2>	
+			<img id="img2" class="d-block m-auto" src="src/chewie.jpg" alt="second cat picture">
+		</div>
 	</div>
 
-	<div id="cat-container">
-		<img src="src/catClicker.jpg" alt="cat picture">
-	</div>
+
+
+
+
 	<script src="js/app.js"></script>	
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 </body>
 </html>
