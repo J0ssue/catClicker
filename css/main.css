@@ -16,3 +16,9 @@ img {
 	width: 40%;
 	height: 172px;
 }
+
+#cat-container div {
+	width: 44%;
+	box-sizing: border-box;
+	margin-bottom: 5em;
+}
