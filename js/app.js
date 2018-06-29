@@ -1,4 +1,54 @@
 // Pattern - Object Literal Module
+// (function() {
+// 	var model = {
+// 		cats: [
+// 		{
+// 			clickCounter: 0,
+// 			name: 'Grumpy',
+// 			src: 'src/catClicker.jpg'
+// 		},
+// 		{
+// 			clickCounter: 0,
+// 			name: 'Happy',
+// 			src: 'src/chewie.jpg'
+// 		},
+// 		{
+// 			clickCounter: 0,
+// 			name: 'Cat', 
+// 			src: 'src/chatty.jpeg'
+// 		},
+// 		{
+// 			clickCounter: 0,
+// 			name: 'Pedro', 
+// 			src: 'src/climber.jpeg'
+// 		},
+// 		{
+// 			clickCounter: 0,
+// 			name: 'Frank', 
+// 			src: 'src/funk.jpeg'
+// 		},
+// 		{
+// 			clickCounter: 0,
+// 			name: 'Gold', 
+// 			src: 'src/gold.jpeg'
+// 		},
+// 		{
+// 			clickCounter: 0,
+// 			name: 'Sleepy', 
+// 			src: 'src/sleepy.jpeg'
+// 		},
+// 		{
+// 			clickCounter: 0,
+// 			name: 'Sunny', 
+// 			src: 'src/surprise.jpeg'
+// 		}
+// 		],
+// 		init: function() {
+			
+// 		}	
+// 	});
+
+
 let cat = {
 	cats: [
 	{
