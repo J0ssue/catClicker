@@ -5,9 +5,9 @@ body {
 	/*text-align: center;*/
 }
 
-h1 {
-	margin-bottom: 60px;
-	font-size: 3em;
+h2 {
+	margin-bottom: 0;
+	padding-bottom: 0;
 }
 
 img {
