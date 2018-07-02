@@ -15,11 +15,36 @@
 	<!-- Image view -->
 	<div id="cat-container" class="container d-flex">
 		<!-- List of Cats -->
-		<ul id="catList"></ul>
-		<div>
+		<div class="container">
+			<ul id="catList"></ul>
+		</div>
+		<!-- Cat view Image display -->
+		<div class="container">
 			<h3 id="name"></h3>
 			<h3>clicks: <span id="clickCount"></span></h3>	
 			<img id="img" class="d-block m-auto" src="" alt="cat picture">
+		</div>
+		<!-- Cat Admin Area -->
+		<div class="container">
+			<button id="admin-btn" class="btn btn-primary btn-block">Admin</button>	
+			<form id="admin">
+				<div class="mb-0">
+					<label for="form-name">Name</label>
+					<input id="form-name" type="text" name="name">
+				</div>
+				<div class="mb-0">
+					<label for="form-img">Image URL</label>
+					<input id="form-img" type="text" name="img">
+				</div>
+				<div class="mb-0">
+					<label for="form-clicks"># Clicks</label>
+					<input id="form-clicks" type="number" name="clicks">
+				</div>
+				<div class="mb-0">
+					<a id="save" class="btn btn-success px-2">Save</a>
+					<a id="cancel" class="btn btn-danger px-2">Cancel</a>	
+				</div>
+			</form>
 		</div>
 	</div>
 

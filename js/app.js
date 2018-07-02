@@ -53,6 +53,7 @@ let octopus = {
 		model.setCurrentCat();
 		listView.init();
 		this.setDefaultCat();
+		adminView.init();
 	},
 	setDefaultCat: function() {
 		document.onload = function() {
@@ -89,6 +90,7 @@ let listView = {
 
 		this.render();
 		catView.init();
+		catView.render();
 	},
 	render: function() {
 		var getCats = octopus.getCats();
@@ -103,17 +105,21 @@ let listView = {
 
 let catView = {
 	init: function() {
-		// this.currentCat = octopus.getCurrentCat();
+		this.currentCat = octopus.getCurrentCat();
+		this.catName = document.querySelector('#name');
+		this.clickCount = document.querySelector('#clickCount');
 		this.img = document.querySelector('img');
+		this.img = document.querySelector('img');
+
+		// adds image clicker:
 		this.addImgClickCounter();
-		catView.render();
 	},
 	render: function() {
 		onclick = function() {
 			var currentCat = octopus.getCurrentCat();
 			let catName = document.querySelector('#name');	
 			let clickCount = document.querySelector('#clickCount');
-			// let img = document.querySelector('#img');
+			let img = document.querySelector('#img');
 
 			catName.textContent = currentCat.name;
 			clickCount.textContent = currentCat.clickCounter;
@@ -121,21 +127,44 @@ let catView = {
 		}
 	},
 	setDefaultCat: function() {
-		var currentCat = octopus.getCurrentCat();
-		let catName = document.querySelector('#name');	
-		let clickCount = document.querySelector('#clickCount');
-			// let img = document.querySelector('#img');
-
-		catName.textContent = currentCat.name;
-		clickCount.textContent = currentCat.clickCounter;
-		this.img.src = currentCat.src;
+		this.catName.textContent = this.currentCat.name;
+		this.clickCount.textContent = this.currentCat.clickCounter;
+		this.img.src = this.currentCat.src;
 	},
-	addImgClickCounter: function() {
+	addImgClickCounter: function(img) {
 		this.img.addEventListener('click', function() {
 			octopus.increaseCounter();
+		});
+	},
+};
+
+let adminView = {
+	init: function() {
+		// displaying addming toggle on & off:
+		const adminBtn = document.querySelector('#admin-btn');
+		const admin = document.querySelector('#admin');
+		this.displayAdmin(adminBtn, admin);
+
+		// get input values
+		const formName = admin.children[0].children[1];
+		const btnS = admin.children[3].children[0];
+		this.getFormValues(formName, btnS);
+	},
+	displayAdmin: function(btn, form) {
+		btn.addEventListener('click', function() {
+			if (form.style.display === 'none') {
+			form.style.display = 'block';
+			} else {
+				form.style.display = 'none';
+			}
+		});
+	},
+	getFormValues: function(name, btnS) {
+		btnS.addEventListener('click', function() {
+			console.log(name.value)
+			name.value = '';
 		});
 	}
 };
 
 octopus.init();
-
