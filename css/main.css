@@ -17,6 +17,10 @@ img {
 	height: 172px;
 }
 
+form {
+	display: none;
+}
+
 #cat-container div {
 	width: 44%;
 	box-sizing: border-box;
